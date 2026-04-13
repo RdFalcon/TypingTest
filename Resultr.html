@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="result.css">
+    <title>FalcoN IT☢️ </title>
+</head>
+<body>
+    <div id="letters-container"></div>
+    <header>
+    
+    <div id="containertop"> 
+       
+        <a id="falconlink" href="index.html"><span  id="Falcon"> Falc<span class="flipo">☢️   </span>n <span class="flip">IT</span></span> </a>
+
+         <div class="nav">
+         <a id="Home" href="index.html" >Home</a>
+         <a id="Quick" href="2ndp.html"> Quick Start</a>
+         <a id="about" href="About.html"> About</a>
+         <a id="Downloads" href="Downloads.html"> Downloads</a>
+      
+         <a id="Donate" href="Donate.html"> Donate ☕</a>
+         
+        </div> 
+</div>
+</header>
+<main>
+    
+<div id="box">
+     <h1 id="heading"> Final Score  </h1>
+     <div>
+        <button  id="restart"> Restart Test</button>
+    </div>
+     
+        <div id="allcircle">
+       <div class="correct">0</div>
+        <span class="wpm"> Total letters</span>
+       
+          
+       <div class="accuracy">0</div>
+        <span class="acu">Accuracy</span>
+       
+      <img id="equal1" src="equal.png" >    
+       <div class="final">0</div>
+        <span class="fin">WPM</span>
+
+        </div>
+    </div>
+
+
+
+</main>
+
+<footer>
+
+     © 2026 FalcoN | All Rights Reserved
+
+</footer>
+
+
+
+
+</body>
+
+
+<script> 
+let time=JSON.parse(localStorage.getItem('storedtime'));
+console.log("here is time",time);
+let righ2=JSON.parse(localStorage.getItem('continueright'));
+let wrong2=JSON.parse(localStorage.getItem('continuewrong'));
+//let runtime= 5;// right now i cannot do with live time may be later on live time will be calculated
+let sum=righ2+wrong2;
+
+
+console.log("total words types is",sum);
+document.querySelector(".correct").firstChild.textContent=sum;
+
+
+let totaltyped=righ2+wrong2;
+let netwpm=(totaltyped-wrong2)/(5*time);
+let accuracy= totaltyped=== 0 ? "0 %": Math.floor((righ2/totaltyped)*100)+ "% ";
+document.querySelector('.accuracy').firstChild.textContent=accuracy ;
+
+let result=Math.floor(netwpm);
+document.querySelector('.final').firstChild.textContent=netwpm;
+
+window.addEventListener('pageshow',function(){
+let btn=document.querySelector('#restart');
+btn.addEventListener('click',function(){
+console.log('i am clicked ')
+    window.location.href='index.html';
+
+
+});
+});
+
+
+
+
+</script>
+<Script src="2ndpage.js"></Script>
+
+
+</html>

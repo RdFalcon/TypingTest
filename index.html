@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+    <title>FalcoN IT☢️ </title>
+</head>
+<body>
+    <div id="letters-container"></div>
+    <header>
+    
+    <div id="containertop"> 
+       
+        <a id="falconlink" href="index.html"><span  id="Falcon"> Falc<span class="flipo">☢️   </span>n <span class="flip">IT</span></span> </a>
+
+         <div class="nav">
+         <a id="Home" href="index.html" >Home</a>
+         <a id="Quick" href="2ndp.html"> Quick Start</a>
+         <a id="about" href="About.html"> About</a>
+         <a id="Downloads" href="Downloads.html"> Downloads</a>
+      
+         <a id="Donate" href="Donate.html"> Donate ☕</a>
+         
+        </div> 
+</div>
+</header>
+<main>
+    
+<div class="upper">
+
+    
+   
+        <h1>Welcome  to  Typing Test program </h1> 
+        <span id="second"> <span>Check your typing skills in a minute</span> 
+                <span>Select your Language and time</span>
+        </span>
+   <form id="typing-options">
+
+    
+  <div class="selector_language">
+    <div>
+        <label for="language"></label>
+        <select name="" id="language">
+        <option value="2ndp.html">English</option>
+        <option value="nepali.html">Nepali</option>
+        <option value="japaneseR.html">Japanese 日本語</option>
+        
+        </select>
+    </div>
+
+    <div class="selector_language"><label for="Time"> </label>
+        <select name="" id='Time'>
+        <option value="0 Minute">1 Minute</option>
+        <option value="2 Minute">3 Minute</option>
+        <option  id="5"  value="4 Minute">5 Minute</option>
+        <option value="9 Minute">10 Minute</option>
+        <option value="999">Unlimited</option>
+
+        </select>
+  
+    </div >
+  </div>
+    </form>
+
+ <button id="start-test" >Start Test</button>
+</div>
+
+
+</main>
+
+<footer>
+
+     © 2026 FalcoN | All Rights Reserved
+
+</footer>
+
+
+
+
+</body>
+
+
+<script>
+    const container = document.querySelector("#letters-container");
+const chars = "अ आ इ ई उ ऊ ऋ ए ऐ ओ औ अं अः क ख J K L M N O P Q R S T U V W X Y ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह क्ष त्र ज्ञ  A B C D E F G H I Z";
+
+function createLetter() {
+    const letter = document.createElement("span");
+    letter.classList.add("letter");
+
+    letter.textContent = chars[Math.floor(Math.random() * chars.length)];
+    const colors=["red","green","yellow","purple","orange","Blue","Aqua"];
+    letter.style.color=colors[Math.floor(Math.random()*colors.length)];
+    // letter.style.left = Math.random() * 30 + "vw";
+    letter.style.right = Math.random() * 30 + "vw";
+    letter.style.fontSize = Math.random() * 20 + 30 + "px";
+    letter.style.animationDuration = Math.random() * 3 + 5 + "s";
+
+    container.appendChild(letter);
+
+    setTimeout(function(){ 
+        letter.remove();
+    }, 6000);
+}
+function createLetter1() {
+    const letter = document.createElement("span");
+    letter.classList.add("letter");
+
+    letter.textContent = chars[Math.floor(Math.random() * chars.length)];
+    const colors=["red","green","yellow","purple","orange","Blue","Aqua"];
+    letter.style.color=colors[Math.floor(Math.random()*colors.length)];
+     letter.style.left = Math.random() * 30 + "vw";
+    // letter.style.right = Math.random() * 30 + "vw";
+    letter.style.fontSize = Math.random() * 20 + 30 + "px";
+    letter.style.animationDuration = Math.random() * 3 + 5 + "s";
+
+    container.appendChild(letter);
+
+    setTimeout(function(){ 
+        letter.remove();
+    }, 6000);
+}
+
+setInterval(createLetter,1050);
+setInterval(createLetter1,1050);
+
+document.querySelector('#start-test').addEventListener('click',function(){
+const lang=document.querySelector('#language').value;
+const time=document.querySelector('#Time').value;
+window.location.href=`${lang}?time=${time}`;//used query selector to send selected data for next page to catch "?" is used
+
+
+
+})
+
+
+
+
+
+
+// var minutes;
+// let timese=document.querySelector('#Time');
+// timese.addEventListener('change',function(){
+// let values=this.value; 
+//  window.minutes=parseInt(values);
+//  minutes=window.minutes;
+//   console.log('here it is ',minutes);
+
+// });
+
+//   let selectedpage;  
+// document.querySelector('#language').addEventListener("change",function(){
+// selectedpage=this.value;
+//   })
+
+// document.querySelector('#start-test').addEventListener('click',function(){
+// if(selectedpage){
+// window.location.href=selectedpage;
+
+
+// }
+
+
+// })
+
+
+
+
+
+    
+</script>
+<Script src="2ndpage.js"></Script>
+
+
+</html>

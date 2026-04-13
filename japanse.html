@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2nd_ptesting</title>
+
+<style>
+body{
+  
+
+    
+    /* Gradient background */
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 600% 600%;
+
+    /* Animation for moving gradient */
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+
+}
+
+.correct { color: green; }
+.incorrect { color: red; }
+
+
+#quote{
+  background-color: white;
+  position: relative;
+  font-weight: 300;
+  font-size: 1.8em;
+  padding: 20px;
+  border-radius: 12px;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 20px auto ;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#input-area{
+  font-family: "MS Gothic", "Yu Gothic", monospace;
+
+  position: relative;
+  top:-50px;
+  width: 60%;
+  padding: 10px;
+  font-size: clamp(10px,2.0vw,28px);
+  border: 2px solid #888;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+h1,#heading{
+  position: relative;
+  top: clamp(1px,2vw,400px);
+  text-align: center;
+  font-size: clamp(10px,4vw,40px);
+}
+
+#quote {
+   top: -40px;
+  position: relative; 
+  background-color: white;
+  font-weight: 300;
+  font-size: clamp(10px,2.5vw,28px);
+  padding: 40px 20px 20px 20px; /* more top padding so clock doesn’t overlap text */
+  border-radius: 12px;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 20px auto;
+  line-height: 1.5;
+  text-align: center;
+  z-index: 5; 
+
+}
+
+.clock {
+  position: relative;
+  top: clamp(2px,2vw,440px);
+  left:clamp(20px,19vw,400px);      
+  font-family: cursive;
+  font-size: clamp(4px, 2vw, 20px);
+  background:transparent;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #333;
+  z-index: 9;    /* ensure it’s above other content */
+  
+}
+
+#close{
+  z-index:12;
+  font-size: clamp(1px,1.9vw,19px);
+position: absolute;
+left:clamp(-20px,3.2vw,240px);
+background-color:transparent;
+padding: clamp(2px,1vw,14px);
+border-radius: 5px;
+border-color: rgb(6, 6, 6);
+transition: all 0.5s ease;
+cursor: pointer;
+}
+#close:hover{
+transform: scale(1.2);
+}
+
+#restart{
+  z-index:13;
+  font-size: clamp(1px,1.9vw,19px);
+position: absolute;
+left:clamp(-20px,3.2vw,240px);
+top:clamp(-20px,8.2vw,240px);
+background-color:transparent;
+padding: clamp(2px,1vw,14px);
+border-radius: 5px;
+border: 2px solid #0f010c;
+  animation: borderColorChange 22s infinite alternate;
+
+transition: all 0.5s ease;
+cursor: pointer;
+
+}
+#changelanguage{
+ z-index:15;
+  font-size: clamp(4px,3.9vw,19px);
+position: absolute;
+left:clamp(-20px,3.2vw,240px);
+top:clamp(20px,56.2vw,240px);
+background-color:transparent;
+padding: clamp(2px,1vw,14px)
+
+}
+
+
+#restart:hover{
+transform: scale(1.2);
+
+}
+textarea{
+  height:101px;
+}
+
+
+</style>
+</head>
+<body>
+  <div ><button id="close"> Goto Result</button>
+  <button  id="restart"> Restart Test</button>
+     <label id="changelanguage"> <input type="checkbox"  id="changelanguage1"> katakana
+
+  </label>
+  
+  </div>
+
+  <h1 id="heading">日本語タイピング練習へようこそ</h1>
+   <div><div class="clock">00:00</div> <div id="quote" >Loading हुदै छ है</div></div>
+<textarea id="input-area" rows="6"  autocomplete="off" autocorrect="off" placeholder="Start typing here..." ></textarea>
+  
+<!-- <button class="strbutton"> start</button>    -->
+
+<script defer  src="japanese.js"></script>
+</body>
+</html>

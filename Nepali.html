@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Typing Test☢️ </title>
+</head>
+<body>
+
+    <header>
+    <div id="containertop"> 
+       
+        <a id="falconlink" href="index.html"><span  id="Falcon"> Falc<span class="flipo">☢️   </span>n <span class="flip">IT</span></span> </a>
+
+         <div class="nav"> <a id="Home" href="index.html" >Home</a>
+         <a id="Quick" href="2ndp.html"> Quick Start</a>
+         <a id="Quick" href="About.html"> About</a>
+         <a id="Quick" href="Downloads.html"> Downloads</a>
+      
+         <a id="Quick" href="Donate.html"> Donate ☕</a>
+         
+        </div> 
+</div>
+</header>
+<main>
+    
+<h1> Welcome To Typing Test Program</h1> 
+<div id="containerquote">
+
+<div id="quote" >
+<div class="clock">00:00</div>
+
+
+
+
+<span class="loading"> Loading हुदै छ है</span>
+</div>
+<textarea id="input-area" rows="6" autocomplete="off" placeholder="Start typing here..." >
+</textarea>
+</div>
+<div  id="menu">
+    <button  id="restart"> ↻ Restart Test</button>
+  <button id="close"> ❌ Close Test    </button>
+  </div>
+
+
+
+</main>
+
+<footer>
+
+     © 2026 FalcoN | All Rights Reserved
+
+</footer>
+
+
+
+
+</body>
+<style>
+
+    
+#falconlink{
+    text-decoration: none;
+    padding: 5px;
+}
+
+
+    #restart,#close{
+          
+        color: white;
+        cursor: pointer;
+        padding: 5px;
+        border: solid 2px rgb(7, 214, 246);
+        border-radius: 5px 5px 5px 0;
+        background-color: rgb(14, 87, 116);
+        animation: borderColorChange 22s infinite alternate;
+        transition: all 0.4s ease;
+      
+
+    }
+
+   #close:hover,#restart:hover{
+transform: scale(1.1) translateZ(0);
+}
+
+#menu{
+display: flex;
+gap: 0.8em;
+justify-content: center;
+
+}
+
+
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+ html, body {
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+body{
+    display: flex;
+    width: auto;
+   flex-direction: column;
+}
+
+
+footer{
+     background: #111;
+        color: white;
+        text-align: center;
+       padding: 15px 0;
+}
+
+
+
+.correct { color: green; }
+.incorrect { color: red; }
+.flip {
+        color: rgb(0, 11, 4);
+        display: inline-block;
+        animation: flipUpDown 6s ease-in-out infinite;
+        font-weight: 700;
+    }
+.flipo {
+    
+    font-size: large;
+    display: inline-block;       /* necessary for transform */
+    
+    animation: rotateWheel 7s linear infinite;
+   
+}
+
+@keyframes rotateWheel {
+   0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+    @keyframes flipUpDown {
+        0%   { transform: rotateX(0deg); }
+        50%  { transform: rotateX(180deg); }
+        100% { transform: rotateX(360deg); }
+    }
+.clock {
+    margin-top: 0;
+    z-index: 999;
+   align-self: flex-start;
+  font-family: cursive;
+ font-size: clamp(8px,1.4vw,28px);
+  background:transparent;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #333;
+
+  
+}
+.loading{
+    text-align:left;
+margin:  auto;
+position: relative;
+top:-15px;
+bottom:0px;
+margin-top:0;
+}
+    #quote{
+  display: flex;
+ flex-direction: column;
+ align-self: center;
+ gap: 2em;
+  background-color: rgb(243, 242, 240);
+  font-weight: 300;
+  font-size: clamp(10px,1.5vw,28px);
+  padding: 5px; /* more top padding so clock doesn’t overlap text */
+  border-radius: 12px;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 0;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  z-index: 5; 
+}
+#input-area{
+  width: 60%;
+  padding: 10px;
+  font-size: clamp(10px,2vw,28px);
+  border: 2px solid #888;
+  border-radius: 8px;
+ height: 4em;
+  margin: 0 auto;
+  background-color: rgb(246, 246, 244);
+}
+
+    
+#containerquote{
+
+display: flex;
+flex-direction: column;
+align-items: center;
+position: relative;
+bottom: 25px;
+
+
+
+}
+
+*{
+    box-sizing: border-box;
+}
+main{
+     flex: 1;
+    background-color: transparent;
+    padding-top: 90px;
+} 
+h1{
+    position: relative;
+    top: -20px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+    html,body{
+       margin: 0;
+       min-height: 100%;}
+    /* Gradient background */
+    body{
+        min-height: 100vh;
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 600% 600%;
+
+    /* Animation for moving gradient */
+    animation: gradientAnimation 15s ease infinite;
+
+}
+header{
+   
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    background: linear-gradient(10deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 600% 600%;
+    /* Animation for moving gradient */
+    animation: gradientAnimation 15s ease infinite; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);/* need to study more */
+    z-index: 100;
+
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+
+}
+
+#containertop{
+height: 100%;
+    display: flex;
+     flex-direction: column;
+     font-size: 1.2em;
+}
+
+    #Falcon{
+        color: white;
+        font-weight: bold;
+font-size:1.5em;
+margin: 0;
+padding: 5px;
+font-family: 'Times New Roman', Times, serif;
+perspective: 800px;
+
+    }
+
+
+.nav{
+display: flex;
+gap: 1.5em;
+justify-content: center;
+
+}
+.nav a{
+font-family: cursive;
+color: white;
+text-decoration: none;
+font-size: clamp(16px, 1vw, 16px);
+}
+
+#Quick:hover{
+box-shadow: 0 4px 0px rgb(249, 4, 217);
+}
+</style>
+<script defer  src="nepali.js"></script>
+
+</html>

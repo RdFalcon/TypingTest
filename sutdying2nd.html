@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Falling Letters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="letters-container"></div>
+
+<script>
+
+const container = document.querySelector("#letters-container");
+const chars = "क ख ग घ ङ च छ ज झ ञ ट  SURENDRA BIST";
+
+function createLetter() {
+    const letter = document.createElement("span");
+    letter.classList.add("letter");
+
+    letter.textContent = chars[Math.floor(Math.random() * chars.length)];
+
+    letter.style.left = Math.random() * 100 + "vw";
+    letter.style.fontSize = Math.random() * 20 + 16 + "px";
+    letter.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+    container.appendChild(letter);
+
+    setTimeout(function(){ 
+        letter.remove();
+    }, 5000);
+}
+
+setInterval(createLetter, 100);
+
+
+
+</script>
+
+<style>
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #0f172a;
+    font-family: monospace;
+}
+
+#letters-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+.letter {
+    position: fixed;
+    top: -50px;
+    color: #38bdf8;
+    animation-name:fall;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+
+
+</style>
+
+</body>
+</html>

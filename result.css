@@ -1,0 +1,179 @@
+#restart {
+  margin: 0;
+  position: relative;
+
+  top:-50;
+  padding: 12px 30px;
+  font-size: 14px;
+  color: rgb(235, 233, 236);
+  background-color: #2980b9;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: visible; /* let dot and tail show outside */
+  transition: all 0.5s ease;
+}
+
+#restart:hover {
+  background-color: #b929af; /* darker shade when hovered */
+  transform: scale(1.2); 
+
+       
+}
+
+ body {
+  margin-top: 1em;
+  margin-left: 12vw;
+    /* Gradient background */
+    background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 600% 600%;
+    /* Animation for moving gradient */
+    animation: gradientAnimation 10s ease infinite;
+}
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+
+}
+
+/* Star effect
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: transparent url("https://www.transparenttextures.com/patterns/stardust.png") repeat;
+  animation: stars 100s linear infinite;
+  opacity: 0.8;
+}
+
+/* Twinkling stars effect */
+
+
+/* @keyframes stars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+} */
+
+/* @keyframes twinkle {
+  from { opacity: 0.3; }
+  50% { opacity: 0.8; }
+  to { opacity: 0.3; }
+} */ */
+
+ #allcircle{
+    display: flex;
+  color: red;
+   
+    
+
+  
+
+ }
+.correct { 
+  width: clamp(40px, 10vw, 100px);           /* Equal width and height */
+  height: clamp(50px, 10vw, 100px);
+  border: solid rgb(36, 195, 230);
+  flex-direction: column;                               /*  due to this setting with .firstchile.textcontent=sum */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex: 0 0 clamp(40px, 10vw, 100px);
+}
+.final  {
+  width: clamp(40px, 10vw, 100px);
+  height: clamp(50px, 10vw, 100px);
+  border: solid rgb(36, 195, 230);  /*  due to this setting with .firstchile.textcontent=sum */
+  flex-direction: column;    
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex: 0 0 clamp(40px, 10vw, 100px);
+  /* background: radial-gradient(circle at 50% 30%, #fbf9fb, #ee5508, #c6df08); */
+  /* box-shadow: 0 0 15px 5px rgba(243, 242, 240, 0.7); */
+   animation: firePulse 1s infinite alternate, fireGlow 0.15s infinite; 
+}
+
+/* 🔥 Flickering and pulsing like fire */
+@keyframes firePulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px 5px rgba(244, 243, 243, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px 10px rgba(243, 241, 240, 0.9);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 8px rgba(249, 246, 246, 0.8);
+  }
+}
+.accuracy { 
+  color: white;
+  width: clamp(40px, 10vw, 100px);           /* Equal width and height */
+  height: clamp(50px, 10vw, 100px);
+  border: solid rgb(36, 195, 230);
+  flex-direction: column;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  flex: 0 0 clamp(40px, 10vw, 100px);
+}
+#box{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ width: 95%;
+  height: 70%;
+
+  gap: clamp(20px, 2vw, 40px);
+  
+    background:transparent;
+          /* glass blur effect */
+ 
+
+  border-radius: 20px;
+
+
+}
+img{
+width: clamp(20px, 2vw, 50px);
+  /* width: clamp(20px, 5vw, 50px);
+  height: clamp(20px, 50vh, 50px); */
+}
+#cross1,#equal1{
+position: relative;
+left: 2px;
+top: 10px;
+
+
+}
+
+#heading{
+     font-size: clamp(20px, 4vw, 40px);
+      margin-top: clamp(-20px, -5vw, 40px);
+      margin-bottom: 20px;       /* gap between heading and circles */
+      text-align: center;
+}
+
+.fin{
+font-size: clamp(10px, 1.2vw, 14px);
+font-weight: 700;
+}
+
+.wpm{
+position: relative;
+
+
+
+}

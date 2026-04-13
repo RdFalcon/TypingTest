@@ -1,0 +1,315 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+#language{
+
+text-align: center;
+
+
+}
+
+#letters-container {    /*  this designs the falling letters*/
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+.letter {
+    position: fixed;
+    top: -50px;
+    animation-name:fall;
+    animation-timing-function: linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+body{
+    display: flex;
+   flex-direction: column;
+   margin-top: 100vh;
+margin: 0;
+
+    /* Gradient background */
+background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
+background-size: 600% 600%;
+
+    /* Animation for moving gradient */
+animation: gradientAnimation 10s ease infinite;
+}
+header{
+position: fixed;
+z-index: 1000;
+background: linear-gradient(10deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 600% 600%;
+
+    /* Animation for moving gradient */
+    animation: gradientAnimation 10s ease infinite; 
+
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);/* need to study more */
+
+}
+
+
+#Home{  
+  font-family: cursive;
+color: rgb(246, 244, 244);
+margin-left: 18em;
+font-size: clamp(16px, 1vw, 16px);
+text-decoration: none;
+
+}
+#Quick{  
+  font-family: cursive;
+color: rgb(246, 244, 244);
+ margin-left: 1em;
+font-size: clamp(16px, 1vw, 16px);
+text-decoration: none;
+}
+#Quick:hover{
+box-shadow: 0 4px 0px rgb(249, 4, 217);
+
+}
+
+
+h1{
+margin-bottom: 10px;
+
+
+}
+
+#second{
+    display: flex;
+    flex-direction: column;
+font-size: clamp(16px, 1vw, 28px);
+margin-bottom: 10px;
+margin-top: -20px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+
+}
+
+
+.upper{
+
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+
+align-items: center;
+margin-top:0; 
+position: relative;
+top: 0px;
+overflow:hidden;
+color: rgb(245, 240, 240);
+padding: 10px;
+font-family: cursive;
+
+
+
+
+}
+
+
+
+
+ .selector_language select {
+    display: flex;
+text-align: center;
+  font-family: cursive;
+  font-size: clamp(12px, 1vw, 20px);
+
+  background: white;
+  padding: 10px;
+  border: 2px solid #007bff;
+  /* max-width: 300px; */
+  border-radius: 2em;
+  border: 2px solid #007bff;
+  width: clamp(50px, 40vw, 200px);
+  box-sizing: border-box;
+   gap: 2em;
+}
+
+
+
+#start-test{
+  font-family: cursive;
+  font-size: 1em;
+  background: rgb(4, 97, 144);
+  color: white  ;
+  padding: 10px;
+  border: 2px solid #007bff;
+ margin-top: 20px;
+cursor:grab;
+  max-width: 300px;
+  border-radius: 2em;
+  border: 2px solid #007bff;
+  width: 200px;
+margin-left: 0;
+ 
+}
+
+#falconlink{
+    text-decoration: none;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+     background: #111;
+        color: white;
+        text-align: center;
+       padding: 15px 0;
+}
+
+
+
+.correct { color: green; }
+.incorrect { color: red; }
+.flip {
+        color: rgb(0, 11, 4);
+        display: inline-block;
+        animation: flipUpDown 6s ease-in-out infinite;
+        font-weight: 700;
+    }
+.flipo {
+    
+    font-size: large;
+    display: inline-block;       /* necessary for transform */
+    
+    animation: rotateWheel 7s linear infinite;
+   
+}
+
+@keyframes rotateWheel {
+   0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+    @keyframes flipUpDown {
+        0%   { transform: rotateX(0deg); }
+        50%  { transform: rotateX(180deg); }
+        100% { transform: rotateX(360deg); }
+    }
+
+
+
+    
+
+
+*{
+    box-sizing: border-box;
+}
+main{
+     flex: 1;
+    background-color: transparent;
+    padding-top: 90px;
+} 
+h1{
+    position: relative;
+    top: -20px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+  
+    /* Gradient background */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    background: linear-gradient(10deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 600% 600%;
+    /* Animation for moving gradient */
+    animation: gradientAnimation 15s ease infinite; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);/* need to study more */
+    z-index: 100;
+
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+
+}
+
+#containertop{
+height: 100%;
+    display: flex;
+     flex-direction: column;
+     font-size: 1.2em;
+}
+
+    #Falcon{
+        color: white;
+        font-weight: bold;
+font-size:1.5em;
+margin: 0;
+padding: 5px;
+font-family: 'Times New Roman', Times, serif;
+perspective: 800px;
+
+    }
+
+
+.nav{
+display: flex;
+flex-direction: row;
+gap: 1.5em;
+justify-content: center;
+ margin-left: -15em;      /*  this is centering the menu */
+
+}
+.nav a{
+font-family: cursive;
+color: white;
+text-decoration: none;
+font-size: clamp(16px, 1vw, 16px);
+}
+
+#Quick:hover{
+box-shadow: 0 4px 0px rgb(249, 4, 217);
+}
+html,body{
+ height: 100%;   
+}
+
+
+
