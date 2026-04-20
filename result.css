@@ -1,17 +1,4 @@
-#restart {
-  margin: 0;
-  position: relative;
 
-  top:-50;
-  padding: 12px 30px;
-  font-size: 14px;
-  color: rgb(235, 233, 236);
-  background-color: #2980b9;
-  border-radius: 5px;
-  cursor: pointer;
-  overflow: visible; /* let dot and tail show outside */
-  transition: all 0.5s ease;
-}
 
 #restart:hover {
   background-color: #b929af; /* darker shade when hovered */
@@ -20,9 +7,11 @@
        
 }
 
+
+
  body {
-  margin-top: 1em;
-  margin-left: 12vw;
+  font-family: cursive;
+  
     /* Gradient background */
     background: linear-gradient(135deg, #ff6ec4, #7873f5, #42e695);
     background-size: 600% 600%;
@@ -73,8 +62,8 @@ body::before {
 
  }
 .correct { 
-  width: clamp(20px, 8vw, 100px);           /* Equal width and height */
-  height: clamp(20px, 8vw, 100px);
+   width: clamp(20px, 5vw, 100px);           /* Equal width and height */
+  height: clamp(20px, 5vw, 100px);
   border: solid rgb(36, 195, 230);
   flex-direction: column;                               /*  due to this setting with .firstchile.textcontent=sum */
   border-radius: 50%;
@@ -85,8 +74,8 @@ body::before {
   flex: 0 0 clamp(40px, 10vw, 100px);
 }
 .final  {
-  width: clamp(20px, 8vw, 100px);           /* Equal width and height */
-  height: clamp(20px, 8vw, 100px);
+    width: clamp(20px, 5vw, 100px);           /* Equal width and height */
+  height: clamp(20px, 5vw, 100px);
   border: solid rgb(36, 195, 230);  /*  due to this setting with .firstchile.textcontent=sum */
   flex-direction: column;    
   border-radius: 50%;
@@ -117,8 +106,8 @@ body::before {
 }
 .accuracy { 
   color: white;
-   width: clamp(20px, 8vw, 100px);           /* Equal width and height */
-  height: clamp(20px, 8vw, 100px);
+   width: clamp(20px, 5vw, 100px);           /* Equal width and height */
+  height: clamp(20px, 5vw, 100px);
   border: solid rgb(36, 195, 230);
   flex-direction: column;
   border-radius: 50%;
@@ -130,13 +119,15 @@ body::before {
 }
 #box{
 
+
+  max-width: 1200px;
+  
+
   display: flex;
   flex-direction: column;
   align-items: center;
- width: 95%;
-  height: 70%;
 
-  gap: clamp(20px, 2vw, 40px);
+
   
     background:transparent;
           /* glass blur effect */
@@ -146,6 +137,10 @@ body::before {
 
 
 }
+* {
+  box-sizing: border-box;
+}
+
 img{
 width: clamp(20px, 2vw, 50px);
   /* width: clamp(20px, 5vw, 50px);
@@ -158,11 +153,35 @@ top: 10px;
 
 
 }
+#finres{
+  display: flex;
+gap: 5px;
+  flex-direction: column;
+}
+h1{
+  margin: 0;
+}
+
+
+#restart {
+ margin-top: -1em;
+ margin-bottom: 1em;
+  padding: 3px 10px;
+  font-size: 14px;
+  color: rgb(235, 233, 236);
+  background-color: #2980b9;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: visible; /* let dot and tail show outside */
+  transition: all 0.5s ease;
+}
+
 
 #heading{
-     font-size: clamp(20px, 4vw, 40px);
-      margin-top: clamp(-20px, -5vw, 40px);
-      margin-bottom: 20px;       /* gap between heading and circles */
+  
+     font-size: clamp(20px, 2vw, 40px);
+    
+           /* gap between heading and circles */
       text-align: center;
 }
 
@@ -174,11 +193,16 @@ font-weight: 700;
 .wpm{
 position: relative;
 }
-   
+   #Graph{
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* horizontal center */
+}
 
 .graph-box{
-    width:800px;
-    height:300px;
+margin-top: 5px;
+    width:50%;
+    height:clamp(200px,3vh,400px);
     border:1px solid #ccc;
     border-radius:10px;
     position:relative;
@@ -202,9 +226,8 @@ position: relative;
 /* BARS CONTAINER */
 .bars{
     position:absolute;
-    bottom:30px;
-    left:40px;
-    right:80px;
+    bottom:5px;
+   
     display:flex;
     align-items:flex-end;
     gap:20px;
@@ -213,7 +236,7 @@ position: relative;
 /* SINGLE BAR */
 .bar{
     width:40px;
-    background: linear-gradient(to top,#70d14f,#8aff7f);
+    background: linear-gradient(to top,#69d14f,#7fffb0);
     border-radius:10px 10px 0 0;
     text-align:center;
     position:relative;
@@ -239,19 +262,16 @@ position: relative;
 }
 
 /* RIGHT SIDE TEXT */
-.side-text{
+.side-text  {
+
+   font-size: 5px;
     position:absolute;
     right:10px;
     top:20px;
     display:flex;
     flex-direction:column;
-    gap:25px;
-    font-size:12px;
+    gap:15px;
+    
     text-align:right;
 }
 
-Graph{
-display: flex;
-align-items: center;
-
-}
