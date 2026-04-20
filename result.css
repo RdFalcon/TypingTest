@@ -73,8 +73,8 @@ body::before {
 
  }
 .correct { 
-  width: clamp(40px, 10vw, 100px);           /* Equal width and height */
-  height: clamp(50px, 10vw, 100px);
+  width: clamp(20px, 8vw, 100px);           /* Equal width and height */
+  height: clamp(20px, 8vw, 100px);
   border: solid rgb(36, 195, 230);
   flex-direction: column;                               /*  due to this setting with .firstchile.textcontent=sum */
   border-radius: 50%;
@@ -85,8 +85,8 @@ body::before {
   flex: 0 0 clamp(40px, 10vw, 100px);
 }
 .final  {
-  width: clamp(40px, 10vw, 100px);
-  height: clamp(50px, 10vw, 100px);
+  width: clamp(20px, 8vw, 100px);           /* Equal width and height */
+  height: clamp(20px, 8vw, 100px);
   border: solid rgb(36, 195, 230);  /*  due to this setting with .firstchile.textcontent=sum */
   flex-direction: column;    
   border-radius: 50%;
@@ -117,8 +117,8 @@ body::before {
 }
 .accuracy { 
   color: white;
-  width: clamp(40px, 10vw, 100px);           /* Equal width and height */
-  height: clamp(50px, 10vw, 100px);
+   width: clamp(20px, 8vw, 100px);           /* Equal width and height */
+  height: clamp(20px, 8vw, 100px);
   border: solid rgb(36, 195, 230);
   flex-direction: column;
   border-radius: 50%;
@@ -173,7 +173,85 @@ font-weight: 700;
 
 .wpm{
 position: relative;
+}
+   
+
+.graph-box{
+    width:800px;
+    height:300px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    position:relative;
+    padding:20px;
+    color:white;
+}
+
+/* GRID LINES */
+.grid-line{
+    position:absolute;
+    width:90%;
+    border-top:1px dashed rgba(255,255,255,0.4);
+}
+
+.line1{ top:20%; }
+.line2{ top:40%; }
+.line3{ top:60%; }
+.line4{ top:80%; }
 
 
+/* BARS CONTAINER */
+.bars{
+    position:absolute;
+    bottom:30px;
+    left:40px;
+    right:80px;
+    display:flex;
+    align-items:flex-end;
+    gap:20px;
+}
+
+/* SINGLE BAR */
+.bar{
+    width:40px;
+    background: linear-gradient(to top,#70d14f,#8aff7f);
+    border-radius:10px 10px 0 0;
+    text-align:center;
+    position:relative;
+}
+
+/* VALUE TEXT */
+.bar span{
+    position:absolute;
+    top:-25px;
+    width:100%;
+    font-weight:bold;
+}
+
+/* X LABELS */
+.labels{
+    position:absolute;
+    bottom:5px;
+    left:40px;
+    right:80px;
+    display:flex;
+    justify-content:space-between;
+    font-size:12px;
+}
+
+/* RIGHT SIDE TEXT */
+.side-text{
+    position:absolute;
+    right:10px;
+    top:20px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    font-size:12px;
+    text-align:right;
+}
+
+Graph{
+display: flex;
+align-items: center;
 
 }
