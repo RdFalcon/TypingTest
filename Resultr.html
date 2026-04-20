@@ -29,8 +29,9 @@
 <main>
     
 <div id="box">
-     <h1 id="heading"> Final Score  </h1>
-     <div>
+     
+     <div id="finres" >
+        <h1 id="heading"> Final Score  </h1>
         <button  id="restart"> Restart Test</button>
     </div>
      
@@ -47,10 +48,6 @@
         <span class="fin">WPM</span>
 
         </div>
-    </div>
-  
-
-</main>
 
 <div id="Graph">
 <div class="graph-box">
@@ -64,7 +61,7 @@
 
 <!-- BARS -->
 <div class="bars">
-    <div class="bar" style="height:54px;"><span id="Result2"> </span></div>
+    <div class="bar"><span id="Result2"> </span></div>
   
 </div>
 
@@ -85,6 +82,13 @@
 
 </div>
 
+
+    </div>
+  
+
+</main>
+
+  
 
 
 <footer>
@@ -139,7 +143,7 @@ console.log("i am result",netwpm);
 cssresult.textContent=netwpm;
 let graphstyle=document.querySelector('.bar');
 
-graphstyle.style.height=(3*netwpm) +"px";// this part will decide how long will be basr
+graphstyle.style.height=(1.3*netwpm) +"px";// this part will decide how long will be basr
 
 
 
