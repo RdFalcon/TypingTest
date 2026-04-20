@@ -18,10 +18,10 @@
          <div class="nav">
          <a id="Home" href="index.html" >Home</a>
          <a id="Quick" href="2ndp.html"> Quick Start</a>
-         <a id="about" href="About.html"> About</a>
-         <a id="Downloads" href="Downloads.html"> Downloads</a>
+         <a id="about" href=""> About</a>
+         <a id="Downloads" href=""> Downloads</a>
       
-         <a id="Donate" href="Donate.html"> Donate ☕</a>
+         <a id="Donate" href=""> Donate ☕</a>
          
         </div> 
 </div>
@@ -48,17 +48,51 @@
 
         </div>
     </div>
-
-
+  
 
 </main>
+
+<div id="Graph">
+<div class="graph-box">
+
+
+<!-- GRID -->
+<div class="grid-line line1"></div>
+<div class="grid-line line2"></div>
+<div class="grid-line line3"></div>
+<div class="grid-line line4"></div>
+
+<!-- BARS -->
+<div class="bars">
+    <div class="bar" style="height:54px;"><span id="Result2"> </span></div>
+  
+</div>
+
+<!-- LABELS -->
+
+
+<!-- SIDE TEXT -->
+<div class="side-text">
+    <div>PRO</div>
+    <div> 60 Fast</div>
+    <div>50 Fluent</div>
+    <div> 30 Average</div>
+    <div>20 Slow</div>
+</div>
+
+
+</div>
+
+</div>
+
+
 
 <footer>
 
      © 2026 FalcoN | All Rights Reserved
 
 </footer>
-
+  
 
 
 
@@ -66,6 +100,10 @@
 
 
 <script> 
+
+
+
+
 let time=JSON.parse(localStorage.getItem('storedtime'));
 console.log("here is time",time);
 let righ2=JSON.parse(localStorage.getItem('continueright'));
@@ -79,12 +117,12 @@ document.querySelector(".correct").firstChild.textContent=sum;
 
 
 let totaltyped=righ2+wrong2;
-let netwpm=(totaltyped-wrong2)/(5*time);
+let netwpm = time>0 ?(totaltyped-wrong2)/(5*time):0;
 let accuracy= totaltyped=== 0 ? "0 %": Math.floor((righ2/totaltyped)*100)+ "% ";
 document.querySelector('.accuracy').firstChild.textContent=accuracy ;
 
-let result=Math.floor(netwpm);
-document.querySelector('.final').firstChild.textContent=netwpm;
+
+document.querySelector('.final').firstChild.textContent=Math.floor(netwpm);
 
 window.addEventListener('pageshow',function(){
 let btn=document.querySelector('#restart');
@@ -96,11 +134,17 @@ console.log('i am clicked ')
 });
 });
 
+let cssresult=document.querySelector('#Result2');
+console.log("i am result",netwpm);
+cssresult.textContent=netwpm;
+let graphstyle=document.querySelector('.bar');
+
+graphstyle.style.height=(3*netwpm) +"px";// this part will decide how long will be basr
 
 
 
 </script>
-<Script src="2ndpage.js"></Script>
+
 
 
 </html>
