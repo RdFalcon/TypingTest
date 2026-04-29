@@ -225,7 +225,7 @@ if(minutes===0 && seconds===0){
 clearInterval(timer);// reset the time
    let time=x.innerText;
 
-window.location.href="result.html","_blank";  // this will take to result page when time is up
+window.location.href="Resultr.html","_blank";  // this will take to result page when time is up
 }
 else if (seconds===0){
     minutes=minutes-1;
@@ -337,7 +337,7 @@ inputimer.addEventListener("input",function(){
 localStorage.setItem('storedtime',JSON.stringify(minutes+1));//this one is for result time
 let gotores=document.querySelector('#close');
 gotores.addEventListener('click',function(){
-window.location.href='result.html'});
+window.location.href='Resultr.html'});
 
 let gotoresult=document.querySelector('#restart');
 gotoresult.addEventListener('click',function(){
@@ -347,7 +347,7 @@ window.location.href='index.html'});
 
 inputArea.addEventListener('paste',function(e){
 e.preventDefault();
-alert("chutiya copy paste जन गर !! ")});
+alert("copy paste is not allowed !! ")});
 
 
 
